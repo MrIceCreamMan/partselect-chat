@@ -1,0 +1,161 @@
+Overview
+
+Backend:
+  Framework: FastAPI (Python 3.11+)
+  LLM: Deepseek API
+  Vector DB: Chroma (embedded)
+  Structured DB: PostgreSQL
+  ORM: SQLAlchemy
+  Environment: Docker
+
+Frontend:
+  Framework: React 18 + TypeScript
+  Styling: Tailwind CSS + shadcn/ui
+  State: React Query + Zustand
+  Build: Vite
+  Environment: Docker (nginx)
+
+Communication:
+  API: REST
+  Streaming: Server-Sent Events (SSE)
+  Format: JSON
+
+Infrastructure:
+  Orchestration: Docker Compose
+  Reverse Proxy: Nginx (production-ready)
+```
+
+## **Complete Directory Structure**
+```
+partselect-chat/
+├── docker-compose.yml
+├── README.md
+├── .env.example
+├── .gitignore
+│
+├── backend/
+│   ├── Dockerfile
+│   ├── requirements.txt
+│   ├── .env
+│   ├── main.py                          # FastAPI entry point
+│   ├── config.py                        # Configuration
+│   │
+│   ├── app/
+│   │   ├── __init__.py
+│   │   ├── api/
+│   │   │   ├── __init__.py
+│   │   │   ├── routes/
+│   │   │   │   ├── __init__.py
+│   │   │   │   ├── chat.py             # Chat endpoints
+│   │   │   │   └── health.py           # Health check
+│   │   │   └── dependencies.py          # FastAPI dependencies
+│   │   │
+│   │   ├── core/
+│   │   │   ├── __init__.py
+│   │   │   ├── orchestrator.py         # Main agent orchestrator
+│   │   │   ├── deepseek_client.py      # Deepseek API wrapper
+│   │   │   └── prompts.py              # System prompts
+│   │   │
+│   │   ├── tools/
+│   │   │   ├── __init__.py
+│   │   │   ├── base.py                 # Base tool class
+│   │   │   ├── product_search.py       # Product search tool
+│   │   │   ├── compatibility.py        # Compatibility checker
+│   │   │   └── troubleshooting.py      # Troubleshooting tool
+│   │   │
+│   │   ├── services/
+│   │   │   ├── __init__.py
+│   │   │   ├── vector_store.py         # Chroma integration
+│   │   │   ├── database.py             # PostgreSQL connection
+│   │   │   └── embeddings.py           # Embedding generation
+│   │   │
+│   │   ├── models/
+│   │   │   ├── __init__.py
+│   │   │   ├── schemas.py              # Pydantic models
+│   │   │   └── database_models.py      # SQLAlchemy models
+│   │   │
+│   │   └── utils/
+│   │       ├── __init__.py
+│   │       ├── guards.py               # Guard rails
+│   │       └── helpers.py              # Utility functions
+│   │
+│   ├── data/
+│   │   ├── products.json               # Product catalog
+│   │   ├── compatibility.json          # Compatibility matrix
+│   │   ├── troubleshooting/
+│   │   │   ├── fridge_icemaker.txt
+│   │   │   ├── dishwasher_pump.txt
+│   │   │   └── ...
+│   │   └── installation_guides/
+│   │       ├── guide_1.txt
+│   │       └── ...
+│   │
+│   ├── scripts/
+│   │   ├── init_db.py                  # Initialize database
+│   │   ├── seed_data.py                # Seed initial data
+│   │   └── create_embeddings.py        # Pre-compute embeddings
+│   │
+│   └── tests/
+│       ├── __init__.py
+│       ├── test_tools.py
+│       └── test_api.py
+│
+├── frontend/
+│   ├── Dockerfile
+│   ├── nginx.conf
+│   ├── package.json
+│   ├── tsconfig.json
+│   ├── vite.config.ts
+│   ├── tailwind.config.js
+│   ├── index.html
+│   │
+│   ├── public/
+│   │   └── partselect-logo.svg
+│   │
+│   └── src/
+│       ├── main.tsx
+│       ├── App.tsx
+│       ├── vite-env.d.ts
+│       │
+│       ├── components/
+│       │   ├── Chat/
+│       │   │   ├── ChatContainer.tsx
+│       │   │   ├── ChatMessage.tsx
+│       │   │   ├── ChatInput.tsx
+│       │   │   └── TypingIndicator.tsx
+│       │   │
+│       │   ├── Messages/
+│       │   │   ├── ProductCard.tsx
+│       │   │   ├── CompatibilityBadge.tsx
+│       │   │   ├── InstallationSteps.tsx
+│       │   │   └── TroubleshootingCard.tsx
+│       │   │
+│       │   └── ui/                     # shadcn components
+│       │       ├── button.tsx
+│       │       ├── card.tsx
+│       │       └── ...
+│       │
+│       ├── hooks/
+│       │   ├── useChat.ts
+│       │   └── useStreamingResponse.ts
+│       │
+│       ├── services/
+│       │   └── api.ts                  # API client
+│       │
+│       ├── store/
+│       │   └── chatStore.ts            # Zustand store
+│       │
+│       ├── types/
+│       │   └── index.ts                # TypeScript types
+│       │
+│       └── styles/
+│           └── globals.css
+│
+├── postgres/
+│   ├── init.sql                        # Database initialization
+│   └── seed.sql                        # Seed data
+│
+└── docs/
+    ├── architecture.md
+    ├── architecture-diagram.png
+    └── api-documentation.md

@@ -1,0 +1,75 @@
+Title: Dishwasher Not Cleaning Dishes Properly
+Category: Cleaning Performance
+Appliance: Dishwasher
+
+Common Causes and Solutions:
+
+1. Clogged Spray Arms
+   - Food particles or mineral deposits block spray holes
+   - Arms can't rotate freely
+   - Restricted water flow
+   Solution: Remove spray arms and clean all holes with toothpick, replace if damaged (Part: WPW10195417)
+
+2. Low Water Temperature
+   - Water must be at least 120°F for effective cleaning
+   - Check water heater setting
+   - Faulty heating element
+   Solution: Adjust water heater to 120°F, test and replace heating element if needed (Part: W10508950)
+
+3. Insufficient Water Fill
+   - Water inlet valve partially clogged or failing
+   - Low household water pressure
+   - Faulty float switch
+   Solution: Clean or replace water inlet valve (Part: W10350376), check float switch (Part: W10440739)
+
+4. Worn Wash Impeller
+   - Impeller circulates water through spray arms
+   - Can crack or wear down
+   - Reduces water pressure
+   Solution: Replace wash impeller (Part: W10826546)
+
+5. Improper Loading
+   - Dishes blocking spray arms
+   - Overloading prevents water circulation
+   - Silverware or utensils falling through rack
+   Solution: Follow manufacturer loading guidelines, ensure spray arms can rotate freely
+
+6. Wrong or Old Detergent
+   - Expired detergent loses effectiveness
+   - Wrong detergent type for water hardness
+   - Too little or too much detergent
+   Solution: Use fresh detergent appropriate for your water type, follow dosage recommendations
+
+7. Dirty Filter
+   - Filter at bottom of tub catches food particles
+   - When clogged, reduces cleaning performance
+   Solution: Remove and clean filter weekly
+
+8. Clogged Detergent Dispenser
+   - Dispenser door won't open
+   - Old detergent buildup
+   Solution: Clean dispenser thoroughly, ensure door opens freely
+
+Diagnostic Steps:
+1. Check water temperature (should reach 120°F)
+2. Inspect and clean spray arms
+3. Remove and clean filter
+4. Verify spray arms rotate freely when loaded
+5. Check water inlet valve and pressure
+6. Test heating element
+7. Replace worn components
+
+Maintenance Tips:
+- Run hot water at sink before starting dishwasher
+- Clean spray arms monthly
+- Use rinse aid for better drying
+- Don't overload
+- Clean filter weekly
+- Run dishwasher cleaner monthly
+
+Related Parts:
+- Upper Spray Arm (WPW10195417) - $34.99
+- Heating Element (W10508950) - $39.99
+- Water Inlet Valve (W10350376) - $49.99
+- Wash Impeller (W10826546) - $29.99
+- Float Switch (W10440739) - $18.99

@@ -1,0 +1,49 @@
+Title: Ice Maker Not Working - Refrigerator Troubleshooting
+Category: Ice Maker Issues
+Appliance: Refrigerator
+
+Common Causes and Solutions:
+
+1. Ice Maker Power/Control Issues
+   - Check if the ice maker is turned on (look for on/off switch or wire signal arm)
+   - Verify the control arm is in the "down" position
+   - Some models have a pause feature - check if it's activated
+   Solution: Turn on the ice maker or lower the control arm
+
+2. Water Supply Problems
+   - Check if water supply valve is fully open
+   - Inspect water line for kinks or freezing
+   - Verify household water pressure is adequate (20-120 psi)
+   - Check water inlet valve for clogs or failure
+   Solution: Clear kinked lines, thaw frozen lines, replace faulty water inlet valve (Part: W10350375)
+
+3. Frozen Fill Tube
+   - Water fill tube can freeze, blocking water flow
+   - Look for ice buildup around fill tube
+   - Often caused by low freezer temperature
+   Solution: Thaw fill tube with warm water, check freezer temperature (should be 0-5°F), replace fill tube if damaged (Part: W10082853)
+
+4. Faulty Ice Maker Assembly
+   - Ice maker motor may be burned out
+   - Mold thermostat could be defective
+   - Broken gears or housing
+   Solution: Replace entire ice maker assembly (Part: PS11752778)
+
+5. Water Filter Issues
+   - Clogged or old water filter reduces water flow
+   - Filter should be replaced every 6 months
+   Solution: Replace water filter (Part: PS11757302)
+
+Diagnostic Steps:
+1. Verify power and ice maker is ON
+2. Check water supply and valve
+3. Inspect for frozen fill tube
+4. Test ice maker manually (varies by model)
+5. Check water filter age and condition
+6. If all else fails, replace ice maker assembly
+
+Related Parts:
+- Ice Maker Assembly (PS11752778) - $124.99
+- Water Inlet Valve (W10350375) - $54.99
+- Water Filter (PS11757302) - $49.99
+- Fill Tube (W10082853) - $15.99

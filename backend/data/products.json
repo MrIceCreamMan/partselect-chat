@@ -1,0 +1,224 @@
+{
+    "products": [
+        {
+            "part_number": "PS11752778",
+            "name": "Ice Maker Assembly",
+            "description": "Replacement ice maker assembly for Whirlpool, KitchenAid, and Maytag refrigerators. Includes housing, motor, and fill cup.",
+            "price": 124.99,
+            "image_url": "https://www.partselect.com/images/parts/PS11752778.jpg",
+            "category": "Ice Maker",
+            "appliance_type": "refrigerator",
+            "brand": "Whirlpool",
+            "in_stock": true
+        },
+        {
+            "part_number": "PS11757302",
+            "name": "Water Filter - Refrigerator",
+            "description": "Reduces contaminants in drinking water and ice. Compatible with most Whirlpool, KitchenAid, Maytag, and Amana refrigerators.",
+            "price": 49.99,
+            "image_url": "https://www.partselect.com/images/parts/PS11757302.jpg",
+            "category": "Water Filter",
+            "appliance_type": "refrigerator",
+            "brand": "Whirlpool",
+            "in_stock": true
+        },
+        {
+            "part_number": "W10190965",
+            "name": "Refrigerator Compressor Start Relay",
+            "description": "Compressor start relay and overload kit. If your refrigerator won't start or cool, this may be the issue.",
+            "price": 29.99,
+            "image_url": "https://www.partselect.com/images/parts/W10190965.jpg",
+            "category": "Compressor Parts",
+            "appliance_type": "refrigerator",
+            "brand": "Whirlpool",
+            "in_stock": true
+        },
+        {
+            "part_number": "W10311524",
+            "name": "Refrigerator Door Gasket",
+            "description": "Door gasket seal for Whirlpool refrigerators. Prevents cold air leaks.",
+            "price": 89.99,
+            "image_url": "https://www.partselect.com/images/parts/W10311524.jpg",
+            "category": "Door Parts",
+            "appliance_type": "refrigerator",
+            "brand": "Whirlpool",
+            "in_stock": true
+        },
+        {
+            "part_number": "W10350375",
+            "name": "Refrigerator Water Inlet Valve",
+            "description": "Controls water flow to ice maker and water dispenser. Replace if no water flows or water leaks.",
+            "price": 54.99,
+            "image_url": "https://www.partselect.com/images/parts/W10350375.jpg",
+            "category": "Water System",
+            "appliance_type": "refrigerator",
+            "brand": "Whirlpool",
+            "in_stock": true
+        },
+        {
+            "part_number": "WPW10515058",
+            "name": "Refrigerator Defrost Thermostat",
+            "description": "Defrost thermostat monitors temperature during defrost cycle. Prevents frost buildup.",
+            "price": 24.99,
+            "image_url": "https://www.partselect.com/images/parts/WPW10515058.jpg",
+            "category": "Temperature Control",
+            "appliance_type": "refrigerator",
+            "brand": "Whirlpool",
+            "in_stock": true
+        },
+        {
+            "part_number": "W10082853",
+            "name": "Refrigerator Ice Maker Fill Tube",
+            "description": "Water fill tube for ice maker. Directs water into ice mold.",
+            "price": 15.99,
+            "image_url": "https://www.partselect.com/images/parts/W10082853.jpg",
+            "category": "Ice Maker",
+            "appliance_type": "refrigerator",
+            "brand": "Whirlpool",
+            "in_stock": true
+        },
+        {
+            "part_number": "W10120998",
+            "name": "Refrigerator Evaporator Fan Motor",
+            "description": "Circulates cold air through refrigerator and freezer compartments.",
+            "price": 64.99,
+            "image_url": "https://www.partselect.com/images/parts/W10120998.jpg",
+            "category": "Fan Motor",
+            "appliance_type": "refrigerator",
+            "brand": "Whirlpool",
+            "in_stock": true
+        },
+        {
+            "part_number": "WPW10195417",
+            "name": "Dishwasher Spray Arm - Upper",
+            "description": "Upper spray arm assembly. Distributes water during wash cycle. Replace if spray holes are clogged or arm is broken.",
+            "price": 34.99,
+            "image_url": "https://www.partselect.com/images/parts/WPW10195417.jpg",
+            "category": "Spray Arm",
+            "appliance_type": "dishwasher",
+            "brand": "Whirlpool",
+            "in_stock": true
+        },
+        {
+            "part_number": "W10290499",
+            "name": "Dishwasher Drain Pump",
+            "description": "Drains water from dishwasher after wash cycle. Replace if dishwasher won't drain or makes loud noise.",
+            "price": 89.99,
+            "image_url": "https://www.partselect.com/images/parts/W10290499.jpg",
+            "category": "Drain Pump",
+            "appliance_type": "dishwasher",
+            "brand": "Whirlpool",
+            "in_stock": true
+        },
+        {
+            "part_number": "W10350376",
+            "name": "Dishwasher Water Inlet Valve",
+            "description": "Controls water flow into dishwasher. Replace if dishwasher won't fill with water.",
+            "price": 49.99,
+            "image_url": "https://www.partselect.com/images/parts/W10350376.jpg",
+            "category": "Water Valve",
+            "appliance_type": "dishwasher",
+            "brand": "Whirlpool",
+            "in_stock": true
+        },
+        {
+            "part_number": "W10112253",
+            "name": "Dishwasher Door Latch Assembly",
+            "description": "Door latch and handle assembly. Keeps door closed during operation.",
+            "price": 74.99,
+            "image_url": "https://www.partselect.com/images/parts/W10112253.jpg",
+            "category": "Door Parts",
+            "appliance_type": "dishwasher",
+            "brand": "Whirlpool",
+            "in_stock": true
+        },
+        {
+            "part_number": "W10508950",
+            "name": "Dishwasher Heating Element",
+            "description": "Heats water during wash cycle and dries dishes. Replace if dishes aren't drying or water isn't hot enough.",
+            "price": 39.99,
+            "image_url": "https://www.partselect.com/images/parts/W10508950.jpg",
+            "category": "Heating Element",
+            "appliance_type": "dishwasher",
+            "brand": "Whirlpool",
+            "in_stock": true
+        },
+        {
+            "part_number": "WPW10082853",
+            "name": "Dishwasher Rack Roller",
+            "description": "Lower rack roller wheel. Set of 8. Replace if rack doesn't roll smoothly.",
+            "price": 19.99,
+            "image_url": "https://www.partselect.com/images/parts/WPW10082853.jpg",
+            "category": "Rack Parts",
+            "appliance_type": "dishwasher",
+            "brand": "Whirlpool",
+            "in_stock": true
+        },
+        {
+            "part_number": "W10372113",
+            "name": "Dishwasher Chopper Blade",
+            "description": "Chopper blade for food disposal system. Grinds food particles during drain cycle.",
+            "price": 24.99,
+            "image_url": "https://www.partselect.com/images/parts/W10372113.jpg",
+            "category": "Pump Parts",
+            "appliance_type": "dishwasher",
+            "brand": "Whirlpool",
+            "in_stock": true
+        },
+        {
+            "part_number": "W10826546",
+            "name": "Dishwasher Wash Impeller",
+            "description": "Circulates water through spray arms. Replace if dishes aren't getting clean.",
+            "price": 29.99,
+            "image_url": "https://www.partselect.com/images/parts/W10826546.jpg",
+            "category": "Pump Parts",
+            "appliance_type": "dishwasher",
+            "brand": "Whirlpool",
+            "in_stock": true
+        },
+        {
+            "part_number": "WP8558307",
+            "name": "Dishwasher Door Gasket",
+            "description": "Door seal prevents water leaks. Replace if water leaks from door during operation.",
+            "price": 34.99,
+            "image_url": "https://www.partselect.com/images/parts/WP8558307.jpg",
+            "category": "Door Parts",
+            "appliance_type": "dishwasher",
+            "brand": "Whirlpool",
+            "in_stock": true
+        },
+        {
+            "part_number": "W10440739",
+            "name": "Dishwasher Float Switch",
+            "description": "Monitors water level in dishwasher. Prevents overfilling.",
+            "price": 18.99,
+            "image_url": "https://www.partselect.com/images/parts/W10440739.jpg",
+            "category": "Water Level",
+            "appliance_type": "dishwasher",
+            "brand": "Whirlpool",
+            "in_stock": true
+        },
+        {
+            "part_number": "WR17X12650",
+            "name": "GE Refrigerator Ice Maker",
+            "description": "Complete ice maker assembly for GE refrigerators. Produces crescent-shaped ice cubes.",
+            "price": 139.99,
+            "image_url": "https://www.partselect.com/images/parts/WR17X12650.jpg",
+            "category": "Ice Maker",
+            "appliance_type": "refrigerator",
+            "brand": "GE",
+            "in_stock": true
+        },
+        {
+            "part_number": "WR02X12663",
+            "name": "GE Refrigerator Water Filter",
+            "description": "Genuine GE water filter. Removes 99% of contaminants. 6-month lifespan.",
+            "price": 54.99,
+            "image_url": "https://www.partselect.com/images/parts/WR02X12663.jpg",
+            "category": "Water Filter",
+            "appliance_type": "refrigerator",
+            "brand": "GE",
+            "in_stock": true
+        }
+    ]
+}

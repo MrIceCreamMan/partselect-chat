@@ -1,0 +1,95 @@
+{
+    "compatibility": [
+        {
+            "part_number": "PS11752778",
+            "model_numbers": [
+                "WDT780SAEM1",
+                "WRF555SDFZ",
+                "KRFF507HPS",
+                "MFI2570FEZ",
+                "WRF540CWBM"
+            ],
+            "brand": "Whirlpool",
+            "appliance_type": "refrigerator"
+        },
+        {
+            "part_number": "PS11757302",
+            "model_numbers": [
+                "WRF555SDFZ",
+                "KRFF507HPS",
+                "WRF540CWBM",
+                "MFI2570FEZ",
+                "WRS325SDHZ"
+            ],
+            "brand": "Whirlpool",
+            "appliance_type": "refrigerator"
+        },
+        {
+            "part_number": "W10190965",
+            "model_numbers": [
+                "WRF555SDFZ",
+                "WRS325SDHZ",
+                "WRB322DMBM",
+                "WRT318FZDM"
+            ],
+            "brand": "Whirlpool",
+            "appliance_type": "refrigerator"
+        },
+        {
+            "part_number": "WPW10195417",
+            "model_numbers": [
+                "WDT780SAEM1",
+                "KDFE104HPS",
+                "WDF520PADM",
+                "WDT730PAHZ"
+            ],
+            "brand": "Whirlpool",
+            "appliance_type": "dishwasher"
+        },
+        {
+            "part_number": "W10290499",
+            "model_numbers": [
+                "WDT780SAEM1",
+                "KDFE104HPS",
+                "WDF520PADM",
+                "WDT730PAHZ",
+                "KDPM604KPS"
+            ],
+            "brand": "Whirlpool",
+            "appliance_type": "dishwasher"
+        },
+        {
+            "part_number": "W10350376",
+            "model_numbers": [
+                "WDT780SAEM1",
+                "WDF520PADM",
+                "WDT730PAHZ"
+            ],
+            "brand": "Whirlpool",
+            "appliance_type": "dishwasher"
+        },
+        {
+            "part_number": "WR17X12650",
+            "model_numbers": [
+                "GFE28GMKES",
+                "PFE28KMKES",
+                "GSS25GSHSS",
+                "GNE27JSMSS"
+            ],
+            "brand": "GE",
+            "appliance_type": "refrigerator"
+        },
+        {
+            "part_number": "WR02X12663",
+            "model_numbers": [
+                "GFE28GMKES",
+                "PFE28KMKES",
+                "GSS25GSHSS",
+                "GNE27JSMSS",
+                "GYE22KMKES"
+            ],
+            "brand": "GE",
+            "appliance_type": "refrigerator"
+        }
+    ]
+}

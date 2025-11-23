@@ -1,0 +1,64 @@
+Title: Dishwasher Not Draining - Complete Troubleshooting Guide
+Category: Drainage Issues
+Appliance: Dishwasher
+
+Common Causes and Solutions:
+
+1. Clogged Drain Hose
+   - Food particles or debris blocking drain hose
+   - Kinked or improperly installed hose
+   - Check hose connection to garbage disposal or sink drain
+   Solution: Remove and clean drain hose, ensure proper installation without kinks
+
+2. Faulty Drain Pump
+   - Pump motor burned out or jammed
+   - Listen for humming noise during drain cycle
+   - Check pump for obstructions (glass, bones, etc.)
+   Solution: Clear obstructions or replace drain pump (Part: W10290499)
+
+3. Garbage Disposal Connection
+   - New garbage disposal may have knockout plug still in place
+   - Blocks drain connection from dishwasher
+   Solution: Remove knockout plug from garbage disposal inlet
+
+4. Clogged Air Gap
+   - Air gap on sink gets clogged with debris
+   - Water backs up and prevents draining
+   Solution: Remove air gap cap and clean thoroughly
+
+5. Blocked Filter or Sump
+   - Dishwasher filter at bottom needs regular cleaning
+   - Food particles accumulate and block drainage
+   Solution: Remove and clean filter assembly, check sump area for debris
+
+6. Faulty Check Valve
+   - One-way valve prevents water backflow
+   - Can get stuck closed
+   Solution: Clean or replace check valve
+
+7. Clogged Chopper Blade
+   - Grinds food particles before draining
+   - Can get jammed or dull
+   Solution: Replace chopper blade (Part: W10372113)
+
+Diagnostic Steps:
+1. Check for standing water in dishwasher
+2. Run drain cycle and listen for pump operation
+3. Inspect drain hose for kinks or clogs
+4. Remove and clean filter
+5. Check garbage disposal connection
+6. Test drain pump for continuity
+7. Verify air gap is clear
+
+Prevention Tips:
+- Scrape dishes before loading
+- Clean filter monthly
+- Run hot water before starting cycle
+- Use quality detergent
+- Perform monthly cleaning cycle
+
+Related Parts:
+- Drain Pump (W10290499) - $89.99
+- Chopper Blade (W10372113) - $24.99
+- Wash Impeller (W10826546) - $29.99
+- Float Switch (W10440739) - $18.99

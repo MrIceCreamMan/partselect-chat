@@ -1,0 +1,71 @@
+services:
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: partselect-backend
+    ports:
+      - "8000:8000"
+    environment:
+      DEEPSEEK_API_KEY: ${DEEPSEEK_API_KEY}
+      DATABASE_URL: "postgresql://partselect_admin:partselect_pass@postgres:5432/partselect_db"
+      ENVIRONMENT: development
+      CHROMA_PERSIST_DIR: /app/chroma_db
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./backend:/app
+      - chroma-data:/app/chroma_db
+    command: uvicorn main:app --host 0.0.0.0 --port 8000 --reload
+    networks:
+      - partselect-network
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: partselect-frontend
+    ports:
+      - "3000:3000"
+    depends_on:
+      - backend
+    environment:
+      BACKEND_URL: ${BACKEND_URL}
+      BROWSER: none
+      WATCHPACK_POLLING: true
+    volumes:
+      - ./frontend:/app
+      - /app/node_modules
+    networks:
+      - partselect-network
+
+  postgres:
+    image: postgres:15-alpine
+    container_name: partselect-postgres
+    environment:
+      POSTGRES_USER: partselect_admin
+      POSTGRES_PASSWORD: partselect_pass
+      POSTGRES_DB: partselect_db
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+      - ./postgres/init.sql:/docker-entrypoint-initdb.d/init.sql
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U partselect_admin -d partselect_db"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+    networks:
+      - partselect-network
+    restart: unless-stopped
+
+volumes:
+  postgres-data:
+  chroma-data:
+
+networks:
+  partselect-network:
+    driver: bridge
