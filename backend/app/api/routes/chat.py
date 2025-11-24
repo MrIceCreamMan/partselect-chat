@@ -104,8 +104,8 @@ async def stream_message(request: ChatRequest):
                 yield f"data: {json.dumps(chunk_data)}\n\n"
 
         except Exception as e:
-            error_chunk = StreamChunk(type="error", content={"error": str(e)})
-            yield f"data: {json.dumps(error_chunk.dict())}\n\n"
+            error_chunk = StreamChunk(type="error", content=str(e))
+            yield f"data: {error_chunk.model_dump_json()}\n\n"
 
     return StreamingResponse(
         event_generator(),

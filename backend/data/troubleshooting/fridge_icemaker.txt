@@ -27,7 +27,7 @@ Common Causes and Solutions:
    - Ice maker motor may be burned out
    - Mold thermostat could be defective
    - Broken gears or housing
-   Solution: Replace entire ice maker assembly (Part: PS11752778)
+   Solution: Replace entire ice maker assembly (Part: PS12364147)
 
 5. Water Filter Issues
    - Clogged or old water filter reduces water flow
@@ -43,7 +43,7 @@ Diagnostic Steps:
 6. If all else fails, replace ice maker assembly
 
 Related Parts:
-- Ice Maker Assembly (PS11752778) - $124.99
+- Ice Maker Assembly (PS12364147) - $162.71
 - Water Inlet Valve (W10350375) - $54.99
 - Water Filter (PS11757302) - $49.99
 - Fill Tube (W10082853) - $15.99

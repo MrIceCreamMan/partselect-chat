@@ -33,7 +33,7 @@ class TroubleshootingTool(BaseTool):
             if brand:
                 query = f"{brand} {query}"
 
-            guides = vector_store.search_troubleshooting(query, n_results=2)
+            guides = vector_store.search_troubleshooting(query, n_results=1)
 
             # Also search for relevant parts
             parts_result = await self.product_search.execute(

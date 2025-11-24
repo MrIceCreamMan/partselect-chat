@@ -32,13 +32,13 @@ class Orchestrator:
                 "type": "function",
                 "function": {
                     "name": "product_search",
-                    "description": "Search for refrigerator or dishwasher parts by name, part number, description, or problem. Returns relevant products with details.",
+                    "description": "Search for refrigerator or dishwasher parts. Use the part number directly as the query string.",
                     "parameters": {
                         "type": "object",
                         "properties": {
                             "query": {
                                 "type": "string",
-                                "description": "Search query (e.g., 'ice maker', 'water filter', 'PS11752778')",
+                                "description": "Search query string. Can be a part number (e.g., 'PS11752778'), part name (e.g., 'Refrigerator Door Shelf Bin'), description, or problem. Just pass the search term directly as a string.",
                             },
                             "appliance_type": {
                                 "type": "string",
@@ -203,7 +203,9 @@ class Orchestrator:
             )
 
         # Second LLM call with tool results
-        final_response = await self.deepseek.chat_completion(messages=messages)
+        final_response = await self.deepseek.chat_completion(
+            messages=messages, tools=self.tool_definitions
+        )
         final_message = final_response["choices"][0]["message"]["content"]
 
         # Extract products from tool results
@@ -261,25 +263,55 @@ class Orchestrator:
                 type="thinking", content="Searching for that information..."
             )
 
-            # DON'T YIELD THE FIRST RESPONSE - it contains tool syntax
+            # Add assistant message with tool calls to conversation
             messages.append(assistant_message)
 
+            # Execute all tools and store results
             for tool_call in tool_calls:
                 function_name = tool_call["function"]["name"]
                 function_args = json.loads(tool_call["function"]["arguments"])
 
+                logger.info(
+                    f"Executing tool: {function_name} with args: {function_args}"
+                )
+
                 # Execute tool
                 tool_result = await self.execute_tool(function_name, function_args)
 
-                # Emit tool results
-                if function_name == "product_search" and "products" in tool_result:
-                    for product in tool_result["products"][:5]:
+                # Emit appropriate chunks based on tool type
+                if function_name == "product_search":
+                    if "products" in tool_result:
+                        for product in tool_result["products"][:5]:
+                            yield StreamChunk(type="product", content=product)
+
+                elif function_name == "troubleshoot":
+                    diagnostic_text = ""
+
+                    # Emit diagnostic steps if available
+                    steps = tool_result.get("diagnostic_steps") or []
+                    if steps:
+                        diagnostic_text += "**Diagnostic Steps:**\n"
+                        for i, step in enumerate(steps, 1):
+                            diagnostic_text += f"{i}. {step}\n"
+
+                    guides = tool_result.get("guides") or []
+                    if guides:
+                        diagnostic_text += "\n**Troubleshooting Guides:**\n\n"
+                        diagnostic_text += self._format_troubleshooting_guides(guides)
+                    else:
+                        logger.info("no guides found")
+
+                    if diagnostic_text.strip():
+                        yield StreamChunk(type="text", content=diagnostic_text)
+
+                    # Emit suggested parts
+                    for product in tool_result.get("suggested_parts") or []:
                         yield StreamChunk(type="product", content=product)
 
                 elif function_name == "check_compatibility":
                     yield StreamChunk(type="compatibility", content=tool_result)
 
-                # Add to messages
+                # Add tool result to messages for final LLM call
                 messages.append(
                     {
                         "role": "tool",
@@ -289,20 +321,54 @@ class Orchestrator:
                     }
                 )
 
-            async for chunk in self.deepseek.stream_chat_completion(messages=messages):
-                if "choices" in chunk and len(chunk["choices"]) > 0:
-                    delta = chunk["choices"][0].get("delta", {})
-                    if "content" in delta and delta["content"]:
-                        yield StreamChunk(type="text", content=delta["content"])
-        else:
-            # No tools, stream directly
-            async for chunk in self.deepseek.stream_chat_completion(messages=messages):
-                if "choices" in chunk and len(chunk["choices"]) > 0:
-                    delta = chunk["choices"][0].get("delta", {})
-                    if "content" in delta and delta["content"]:
-                        yield StreamChunk(type="text", content=delta["content"])
+        # Stream final response with tool results incorporated
+        async for chunk in self.deepseek.stream_chat_completion(
+            messages=messages, tools=self.tool_definitions
+        ):
+            if "choices" in chunk and len(chunk["choices"]) > 0:
+                delta = chunk["choices"][0].get("delta", {})
+                if "content" in delta and delta["content"]:
+                    yield StreamChunk(type="text", content=delta["content"])
 
         yield StreamChunk(type="done", content=None)
+
+    @staticmethod
+    def _format_troubleshooting_guides(guides: list) -> str:
+        """
+        Turn vector_store guides into readable markdown.
+        Supports guides that are dicts or strings.
+        """
+        if not guides:
+            return ""
+
+        blocks = []
+        for g in guides:
+            if isinstance(g, str):
+                # already text
+                blocks.append(g.strip())
+                continue
+
+            meta = g.get("metadata") or {}
+            title = meta.get("title") or g.get("title") or "Troubleshooting Guide"
+            content = (g.get("content") or "").strip()
+            relevance = g.get("relevance_score")
+
+            # If content starts with "Title: X", drop that line to avoid duplication
+            if content.lower().startswith("title:"):
+                lines = content.splitlines()
+                content = "\n".join(lines[1:]).lstrip()
+
+            # Use <details> so the guide is expandable (marked will render it as HTML)
+            block = (
+                f"<details>\n<summary><strong>{title}</strong></summary>\n\n{content}\n"
+            )
+            if relevance is not None:
+                block += f"\n<em>Relevance: {relevance:.2f}</em>\n"
+            block += "\n</details>"
+
+            blocks.append(block)
+
+        return "\n\n".join(blocks)
 
 
 # Global instance
