@@ -1,0 +1,73 @@
+.compatibility-badge {
+    display: flex;
+    gap: 12px;
+    padding: 15px;
+    border-radius: 8px;
+    margin: 8px 0;
+    border: 2px solid;
+}
+
+.compatibility-badge.compatible {
+    background-color: #f0fdf4;
+    border-color: #22c55e;
+}
+
+.compatibility-badge.not-compatible {
+    background-color: #fef2f2;
+    border-color: #ef4444;
+}
+
+.compatibility-icon {
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.compatible .compatibility-icon {
+    background-color: #22c55e;
+    color: white;
+}
+
+.not-compatible .compatibility-icon {
+    background-color: #ef4444;
+    color: white;
+}
+
+.compatibility-details {
+    flex: 1;
+}
+
+.compatibility-header {
+    font-size: 14px;
+    margin-bottom: 6px;
+}
+
+.compatible .compatibility-header {
+    color: #16a34a;
+}
+
+.not-compatible .compatibility-header {
+    color: #dc2626;
+}
+
+.compatibility-info {
+    display: flex;
+    gap: 15px;
+    font-size: 12px;
+    color: #666;
+    font-family: monospace;
+    margin-bottom: 8px;
+}
+
+.compatibility-explanation {
+    font-size: 13px;
+    color: #333;
+    margin: 0;
+    line-height: 1.4;
+}
