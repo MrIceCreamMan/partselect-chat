@@ -56,7 +56,7 @@ vi .env
 
 3. Start all services
 ```bash
-docker-compose up --build
+docker-compose up --build -d
 ```
 
 4. Initialize database and seed data
