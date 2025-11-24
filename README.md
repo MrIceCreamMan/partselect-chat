@@ -80,8 +80,8 @@ partselect-chat/
 ├── backend/
 │   ├── Dockerfile
 │   ├── requirements.txt
-│   ├── main.py                          # FastAPI entry point
-│   ├── config.py                        # Configuration
+│   ├── main.py                         # FastAPI entry point
+│   ├── config.py                       # Configuration
 │   │
 │   ├── app/
 │   │   ├── __init__.py
@@ -91,7 +91,7 @@ partselect-chat/
 │   │   │   │   ├── __init__.py
 │   │   │   │   ├── chat.py             # Chat endpoints
 │   │   │   │   └── health.py           # Health check
-│   │   │   └── dependencies.py          # FastAPI dependencies
+│   │   │   └── dependencies.py         # FastAPI dependencies
 │   │   │
 │   │   ├── core/
 │   │   │   ├── __init__.py
@@ -135,54 +135,25 @@ partselect-chat/
 │
 ├── frontend/
 │   ├── Dockerfile
-│   ├── nginx.conf
 │   ├── package.json
-│   ├── tsconfig.json
-│   ├── vite.config.ts
-│   ├── tailwind.config.js
-│   ├── index.html
+│   ├── package-lock.json
 │   │
 │   ├── public/
-│   │   └── partselect-logo.svg
+│   │   ├── manifest.json
+│   │   └── index.html
 │   │
 │   └── src/
-│       ├── main.tsx
-│       ├── App.tsx
-│       ├── vite-env.d.ts
+│       ├── index.js
+│       ├── App.js
 │       │
 │       ├── components/
-│       │   ├── Chat/
-│       │   │   ├── ChatContainer.tsx
-│       │   │   ├── ChatMessage.tsx
-│       │   │   ├── ChatInput.tsx
-│       │   │   └── TypingIndicator.tsx
-│       │   │
-│       │   ├── Messages/
-│       │   │   ├── ProductCard.tsx
-│       │   │   ├── CompatibilityBadge.tsx
-│       │   │   ├── InstallationSteps.tsx
-│       │   │   └── TroubleshootingCard.tsx
-│       │   │
-│       │   └── ui/                     # shadcn components
-│       │       ├── button.tsx
-│       │       ├── card.tsx
-│       │       └── ...
+│       │   ├── ChatWindow.js
+│       │   ├── CompatibilityBadges.jsx
+│       │   ├── ProductCard.jsx
+│       │   └── TypingIndicator.jsx
 │       │
-│       ├── hooks/
-│       │   ├── useChat.ts
-│       │   └── useStreamingResponse.ts
-│       │
-│       ├── services/
-│       │   └── api.ts                  # API client
-│       │
-│       ├── store/
-│       │   └── chatStore.ts            # Zustand store
-│       │
-│       ├── types/
-│       │   └── index.ts                # TypeScript types
-│       │
-│       └── styles/
-│           └── globals.css
+│       └── api/
+│           └── api.js
 │
 └── postgres/
     └── init.sql                        # Database initialization
